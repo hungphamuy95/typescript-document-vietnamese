@@ -7,7 +7,7 @@ Một số phần mình dùng từ gốc trong tiếng Anh.
 
 ## Nội dung bài học 
 
-1. [Kiểu cơ bản](document/chap1.md)
+1. [Kiểu dữ liệu cơ bản](document/chap1.md)
 2. Khai báo biến
 3. Interfaces
 4. Classes
