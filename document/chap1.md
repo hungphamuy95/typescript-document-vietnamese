@@ -99,7 +99,7 @@ Kiểu thống nhất là một chủ để nâng cao sẽ được giới thi�
 
 ### Kiểu Enum
 
-'enum' là một tập hợp các kiểu dữ liệu trong Javascript rất hữu ích. Giống như các C#, enum là một cách thể hiện một tập hợp các giá trị số học giúp chúng ta dễ hình dung.
+'enum' là một tập hợp các kiểu dữ liệu trong Javascript rất hữu ích. Giống như C#, enum là một cách thể hiện một tập hợp các giá trị số học giúp chúng ta dễ hình dung.
 
 ```javascript
 enum Color {Red, Green, Blue}
