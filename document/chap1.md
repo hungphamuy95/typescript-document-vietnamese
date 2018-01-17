@@ -1,5 +1,7 @@
 # Kiểu dữ liệu cơ bản
 
+> Tham khảo bài gốc tại [đây](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+
 ### Giới thiệu
 
 Trong quá trình phát triển phần mềm chúng ta thường xuyên làm việc với các kiểu dữ liệu cơ bản như: số thực, chuỗi, structure, giá trị boolean.
