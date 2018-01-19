@@ -70,7 +70,9 @@ functino f(){
 
 f();// return '2'
 ```
+### Phạm vi sử dụng
 
+`var` có một số quy tắc 
 
 
 
