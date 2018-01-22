@@ -72,7 +72,89 @@ f();// return '2'
 ```
 ### Phạm vi sử dụng
 
-`var` có một số quy tắc 
+`var` có một số quy tắc khai báo khá dị. Bạn có thể tham khảo ví dụ dưới đây:
+
+```javascript
+function f(shouldInitialize: boolean){
+  if(shouldInitialize){
+    var x = 10;
+    }
+    
+    return x;
+}
+
+f(true); // returns '10'
+f(false); // return 'undefinded'
+```
+
+Biến `x` được khai báo bên trong điều kiện `if`, tất nhiên chúng ta có thể gọi nó bên ngoài điều kiện `if`. Bởi vì khai báo biến với `var` giúp chúng ta có thể gọi biến đó ở mọi nơi từ function, module, namespace, hay biến toàn cục - chúng ta sẽ đề cập sau.
+
+Phạm vi biến có thể là nguyên nhân của nhiều loại lỗi. Khai báo môt biến nhiều lần có thể làm vấn đề thêm trầm trọng hơn:
+
+```javascript
+function sumMatrix(matrix: number[][]){
+  var sum = 0;
+  for(var i = 0; i < matrix.length; i++){
+      var currentRow = matrix[i];
+      for(var i = 0; i< currentRow.length; i++){
+        sum += currentRow[i];
+      }
+  }
+  
+  return sum;
+}
+```
+
+Có thể chúng ta dễ dàng nhận thấy rằng vòng `for` bên trong sẽ ghi đè biến `i` bởi vì biến `i` có phạm vi bên trong `function`. Khi bạn là một lập trình viên kinh nghiệm, một số lỗi tương tự sẽ khiến bạn rơi vào sự thất vọng đến vô cùng.
+
+### Biến không minh bạch
+
+Chúng ta hãy suy nghĩ về output của ví dụ dưới đây:
+
+```javascript
+for (var i = 0; i < 10; i++){
+setTimeout(function () { console.log(i); }, 100 * i);
+}
+```
+
+`setTimeout` sẽ khởi chạy một function sau một khoảng thời gian xác định.
+
+Chúng tay hãy nhìn lại:
+
+```javascript
+10
+10
+10
+10
+10
+10
+10
+10
+10
+10
+```
+
+Rất nhiều lập trình viên cảm thấy nó quen quen, nhưng bạn đừng ngạc nhiên, không chỉ mỗi bạn nghĩ như vậy. Rất nhiều người đoán rằng output sẽ nhứ thế này
+
+```javascript
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+Như chúng ta đã đề cập về variable capturing. Mỗi khi chúng ta truyền `setTimeout` vào function thì biến i được lấy ngay trong cùng một phạm vi
+
+
+
+
+
 
 
 
